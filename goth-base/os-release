@@ -1,0 +1,13 @@
+NAME="Gothic OS"
+PRETTY_NAME="Gothic OS"
+ID=goth
+ID_LIKE=arch
+BUILD_ID=rolling
+ANSI_COLOR="38;2;202;206;250m"
+HOME_URL="https://github.com/GothicOS"
+DOCUMENTATION_URL="https://github.com/GothicOS"
+SUPPORT_URL="https://github.com/GothicOS"
+BUG_REPORT_URL="https://github.com/GothicOS"
+PRIVACY_POLICY_URL="https://github.com/GothicOS"
+LOGO=gothicos-logo
+DEFAULT_HOSTNAME=Goth

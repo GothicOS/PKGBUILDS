@@ -1,0 +1,13 @@
+pkgname=goth-base
+pkgver=1.0
+pkgrel=1
+pkgdesc="Base files for Gothic OS linux distribution"
+arch=('any')
+url='https://github.com/GothicOS'
+license=('GPL')
+makedepends=('git')
+source=('os-release')
+sha512sums=('b5a86eff68eea49b5293cd6ae3e44e9a441b906a097d1013991bb3aaf21f805fbd1da529bd789ac2240d131b044d6fdc29846ef8e8474fe5b2eaf856bf769d9b')
+package() {
+	install -m 0777 -D "./os-release" "${pkgdir}/etc/os-release"
+}
