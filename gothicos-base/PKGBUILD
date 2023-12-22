@@ -1,0 +1,24 @@
+pkgname="gothicos-base"
+pkgver="1"
+pkgrel="1.0"
+pkgdesc="Gothic OS base files required for the initial setup"
+arch=('any')
+depends=('base')
+license=("GPL")
+source=("goth-release" "gothicos-menu-icon.svg" "gothicos-menu-icon.png" "GothicOS-Skull.png" "GothicOS-Witch-Book.png")
+sha512sums=("5855e9f0bc278652adf77c18c8d33536875222aa681dc45719de016877edfaac173273b403c4c6ebc326439a55551808207ff76468ec3aa88e06a7e537897400" "220daf42680ffe295471b86d41c7265287d1a6eee65417604823aa549f04cc834a186dbd5e4294527c737ed2d890077c3fc5c25670b8cb30f3ca5b6de5ca50e2" "a6ec8ff9b0afc7da23d6ea3a2496982b7db2dd56a45b619030e279ed7bbbc00b01ea80c450123e410a20801af34cb3312724b1d2cda100fbbe92f04b2e5bb8de" "2b782a39b3682883ae8e2a2dca8a80c95d1d1a467abd93fed24f6937d674981432c9452beffb47bfe414d60b8fc4310c91eb13a85a4ec3454c77e29f201dfae4" "9b5b044688861a086152e1ce25764f2c3c3c1979ba5453836560f3e3382b942b0d142a5084189c5671b36420a7dc5a9bd1161744d74a8678cd5aea6d6d0874bf")
+
+package() {
+	## OS release files
+	install -m 0777 -D "./goth-release" "${pkgdir}/etc/arch-release"
+	install -m 0777 -D "./goth-release" "${pkgdir}/etc/os-release"
+	install -m 0644 -D "./goth-release" "${pkgdir}/etc/lsb-release"
+	install -m 0644 -D "./goth-release" "${pkgdir}/usr/lib/os-release"
+	install -m 0644 -D "./goth-release" "${pkgdir}/usr/lib/lsb-release"
+
+	## OS Artwork and other related files 
+	install -m 0644 -D "./gothicos-menu-icon.svg" "${pkgdir}/usr/share/icons/gothicos/symbolic/gothicos-start-icon.svg"
+	install -m 0644 -D "./gothicos-menu-icon.png" "${pkgdir}/usr/share/icons/gothicos/symbolic/gothicos-start-icon.png"
+	install -m 0644 -D "./GothicOS-Skull.png" "${pkgdir}/usr/share/backgrounds/gothicos/Gothic OS Skull.png"
+	install -m 0644 -D "./GothicOS-Witch-Book.png" "${pkgdir}/usr/share/backgrounds/gothicos/Gothic OS Witch Book.png"
+}

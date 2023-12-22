@@ -10,4 +10,4 @@ SUPPORT_URL="https://github.com/GothicOS"
 BUG_REPORT_URL="https://github.com/GothicOS"
 PRIVACY_POLICY_URL="https://github.com/GothicOS"
 LOGO=gothicos-logo
-DEFAULT_HOSTNAME=Goth
+DEFAULT_HOSTNAME=GothicOS
