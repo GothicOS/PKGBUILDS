@@ -8,4 +8,4 @@ Target = lsb-release
 [Action]
 Description = Set up the initial filesystem for Gothic OS
 When = PostTransaction
-Exec = /usr/bin/filesystem-setup.bash
+Exec = /usr/share/gothicos/filesystem-setup
