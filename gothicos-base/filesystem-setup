@@ -15,22 +15,41 @@ echo "$os_release_string" > /etc/os-release
 echo "$os_release_string" > /usr/lib/os-release
 
 # lsb-release file
-lsb_release_string='
-DISTRIB_ID="Goth"
+lsb_release_string='DISTRIB_ID="Goth"
 DISTRIB_RELEASE="rolling"
-DISTRIB_DESCRIPTION="Gothic OS"
-'
+DISTRIB_DESCRIPTION="Gothic OS"'
 echo "$lsb_release_string" > /etc/lsb-release
 
 # issue file
-echo "Gothic OS \r (\l) - \t" > /etc/issue
+echo "                                       
+                   .::--=====-:        
+               :::++=        -==-     System  :: \s 
+            .::..:=**-         ==     
+          .....+##*=           :      Host    :: \n  
+        ....-###++           :-                    
+       ...=%#++            :          Arch    :: \m   
+     ...:##++                                      
+     ..=#*=             :== =:=*      TTY     :: \l  
+    :.:#+                 :++*+                    
+    -.-+-              :=*#+          Kernel  :: \r  
+     ==-=:.: ...    ..*%#%#+=+===::                
+      =-*#####%#   .*#*-++++   =:::-  Build   :: \v  
+           =+*+    -=**+*     .:.-##               
+     ..:=+++                .-:.*##*  Time    :: \t  
+  =:=#*                   :+::##-*+   
+   ==++=+*=..        ..=+-=###:=++    Version :: \v
+      ===*##*+====-=+*#*==+ *:++       
+             =-----=      .-+=         
+                         -=            
+- twohexed (twohexed.vercel.app)
+" > /etc/issue
 
 # motd
 echo "Greetings $USER, I, Nick (twohexed.vercel.app), welcome you in this world of darkness. I hope you enjoy your stay. 
 
 Kitty :3!!!1
   |\_/|
-  `o.o'
+  \`o.o'
   =(_)=
-    U
-" > /etc/motd
+    U"
+> /etc/motd
