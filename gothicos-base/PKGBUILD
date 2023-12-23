@@ -22,7 +22,7 @@ sha512sums=("5855e9f0bc278652adf77c18c8d33536875222aa681dc45719de016877edfaac173
 
 package() {
 	## OS specific file setup hook
-	install -m 500 -D "./33-filesystem-setup.hook" "${pkgdir}/etc/pacman.d/33-filesystem-setup.hook"
+	install -m 500 -D "./33-filesystem-setup.hook" "${pkgdir}/etc/pacman.d/hooks/33-filesystem-setup.hook"
 
 	## Source script setup
 	install -m 0755 -D "./filesystem-setup" "${pkgdir}/usr/share/gothicos/filesystem-setup"
