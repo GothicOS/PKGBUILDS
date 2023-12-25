@@ -21,15 +21,7 @@ DISTRIB_DESCRIPTION="Gothic OS"'
 echo "$lsb_release_string" > /etc/lsb-release
 
 # issue file
-echo "System  :: \s
-Host    :: \n
-Arch    :: \m
-TTY     :: \l
-Kernel  :: \r
-Build   :: \v
-Time    :: \t
-Version :: \v
-" > /etc/issue
+echo "Gothic OS \m - \t" > /etc/issue
 
 # motd
 echo "Greetings $USER, I, Nick (twohexed.vercel.app), welcome you in this world of darkness. I hope you enjoy your stay. 
