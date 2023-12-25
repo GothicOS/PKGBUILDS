@@ -13,8 +13,7 @@ source=("GothicOS-logo.png"
 	"GothicOS-Skull.png" 
 	"GothicOS-Witch-Book.png"
 	"33-filesystem-setup.hook"
-	"filesystem-setup"
-	"pacman.conf")
+	"filesystem-setup")
 sha512sums=("92786d6855e91a1a1b21f7d46f8eae0f40c2613a7ea2f142717ac0002a03b35651ad7fb9de2eab026b59c2125f812e00a7f93a9800b0a8b99ecbad70e988dd1a"
 	"b204ab085ff1eea38650a303508a0344126f87e09093e6c2e6cb02db71681541eab9b0293d773bc6f9818e6e0c27a6e794fb89e10a045741dc1eba6ef4866dea"
 	"dedae01f1d8bdf2ed9d52cbb72ddee086811bf9fd9b5ae9953c818034c495955b259fb716cff51e2915db58424d9c0c0623bcd461b97ef21160d990cc5d7a737"
@@ -23,8 +22,7 @@ sha512sums=("92786d6855e91a1a1b21f7d46f8eae0f40c2613a7ea2f142717ac0002a03b35651a
 	"2b782a39b3682883ae8e2a2dca8a80c95d1d1a467abd93fed24f6937d674981432c9452beffb47bfe414d60b8fc4310c91eb13a85a4ec3454c77e29f201dfae4" 
 	"9b5b044688861a086152e1ce25764f2c3c3c1979ba5453836560f3e3382b942b0d142a5084189c5671b36420a7dc5a9bd1161744d74a8678cd5aea6d6d0874bf"
 	"02b9fe3765bde6b5b673da531991c2f6f571bc639625d1779c675c1433df368c1dcc9fd9239f1ec286711be0bb8ecf1053be9038dd5d62483791bb86d46c4031"
-	"55bb86fc90ae038cf61e17c22d780467e2824030e2c7334899155f7d4d38111cd5068b771a3ed618545639c7ed49ba49ac1d871f15e575a9d1706d08f3be42bb"
-	"346908f800af204f1dcff252e82aea6c78b8a556450d5ebe8682fca67b825b04e326b094226bf9c0d7984bd1e0f61396b11e2434deaa7cb0c3aa125f90029898")
+	"55bb86fc90ae038cf61e17c22d780467e2824030e2c7334899155f7d4d38111cd5068b771a3ed618545639c7ed49ba49ac1d871f15e575a9d1706d08f3be42bb")
 
 package() {
 	## OS specific file setup hook
@@ -32,9 +30,6 @@ package() {
 
 	## Source script setup
 	install -m 0755 -D "./filesystem-setup" "${pkgdir}/usr/share/scripts/gothicos/filesystem-setup"
-
-	## pacman configuration file
-	install -m 0644 -D "./pacman.conf" "${pkgdir}/etc/pacman.conf"
 	
 	## Artwork and other related files 
 	install -m 0644 -D "./gothicos-menu-icon.svg" "${pkgdir}/usr/share/icons/gothicos/symbolic/gothicos-start-icon.svg"
