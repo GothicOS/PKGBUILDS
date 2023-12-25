@@ -21,12 +21,11 @@ echo "$lsb_release_string" > /etc/lsb-release
 
 # motd file
 echo "clear
-KITTYYY :3!!!1
-  |\_/|
-  \`o.o'
-  =(_)=
+  |\_/|    Thank u for using Gothic OS,
+  \`o.o'    I hope u enjoyy!!!!11 :33
+  =(_)=     rawrr xddd xppp (sorry i get silly at times)
     U
-    ~ thank u for trying GothicOS :33 i hope u enjoy rawrrr xdd xpp
+    ~ nick
 "> /etc/motd
 
 # issue file
