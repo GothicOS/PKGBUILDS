@@ -21,27 +21,14 @@ DISTRIB_DESCRIPTION="Gothic OS"'
 echo "$lsb_release_string" > /etc/lsb-release
 
 # issue file
-echo "                                       
-                   .::--=====-:        
-               :::++=        -==-     System  :: \s 
-            .::..:=**-         ==     
-          .....+##*=           :      Host    :: \n  
-        ....-###++           :-                    
-       ...=%#++            :          Arch    :: \m   
-     ...:##++                                      
-     ..=#*=             :== =:=*      TTY     :: \l  
-    :.:#+                 :++*+                    
-    -.-+-              :=*#+          Kernel  :: \r  
-     ==-=:.: ...    ..*%#%#+=+===::                
-      =-*#####%#   .*#*-++++   =:::-  Build   :: \v  
-           =+*+    -=**+*     .:.-##               
-     ..:=+++                .-:.*##*  Time    :: \t  
-  =:=#*                   :+::##-*+   
-   ==++=+*=..        ..=+-=###:=++    Version :: \v
-      ===*##*+====-=+*#*==+ *:++       
-             =-----=      .-+=         
-                         -=            
-- twohexed (twohexed.vercel.app)
+echo "System  :: \s
+Host    :: \n
+Arch    :: \m
+TTY     :: \l
+Kernel  :: \r
+Build   :: \v
+Time    :: \t
+Version :: \v
 " > /etc/issue
 
 # motd
