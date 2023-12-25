@@ -1,8 +1,7 @@
 #!/usr/bin/bash
 
 # os-release file
-os_release_string='
-ID=goth
+os_release_string='ID=goth
 ID_LIKE=arch
 DEFAULT_HOSTNAME="GothicOS"
 NAME="Gothic OS"
@@ -21,11 +20,13 @@ DISTRIB_DESCRIPTION="Gothic OS"'
 echo "$lsb_release_string" > /etc/lsb-release
 
 # motd file
-echo "Haiii :DD thank you for trying this here's a kitty for u :3!!!1
+echo "clear
+KITTYYY :3!!!1
   |\_/|
   \`o.o'
   =(_)=
     U
+    ~ thank u for trying GothicOS :33 i hope u enjoy rawrrr xdd xpp
 "> /etc/motd
 
 # issue file
