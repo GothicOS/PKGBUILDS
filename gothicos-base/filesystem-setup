@@ -20,15 +20,15 @@ DISTRIB_RELEASE="rolling"
 DISTRIB_DESCRIPTION="Gothic OS"'
 echo "$lsb_release_string" > /etc/lsb-release
 
-# issue file
-echo "Gothic OS \m - \t" > /etc/issue
-
-# motd
-echo "Greetings $USER, I, Nick (twohexed.vercel.app), welcome you in this world of darkness. I hope you enjoy your stay. 
-
-Kitty :3!!!1
+# motd file
+echo "Haiii :DD thank you for trying this here's a kitty for u :3!!!1
   |\_/|
   \`o.o'
   =(_)=
-    U"
-> /etc/motd
+    U
+"> /etc/motd
+
+# issue file
+echo "Gothic OS \m - \t" > /etc/issue
+
+
