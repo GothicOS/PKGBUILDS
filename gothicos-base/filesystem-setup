@@ -20,7 +20,7 @@ DISTRIB_DESCRIPTION="Gothic OS"'
 echo "$lsb_release_string" > /etc/lsb-release
 
 # motd file
-echo "^[[H^[[2J^[[3J
+echo "[H[2J[3J
   |\_/|
   \`o.o'    mweow
   =(_)=    >.<
@@ -29,5 +29,3 @@ echo "^[[H^[[2J^[[3J
 
 # issue file
 echo "Gothic OS \m - \t" > /etc/issue
-
-
