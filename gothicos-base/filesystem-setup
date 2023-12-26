@@ -20,12 +20,11 @@ DISTRIB_DESCRIPTION="Gothic OS"'
 echo "$lsb_release_string" > /etc/lsb-release
 
 # motd file
-echo "clear
-  |\_/|    Thank u for using Gothic OS,
-  \`o.o'    I hope u enjoyy!!!!11 :33
-  =(_)=     rawrr xddd xppp (sorry i get silly at times)
+echo "^[[H^[[2J^[[3J
+  |\_/|
+  \`o.o'    mweow
+  =(_)=    >.<
     U
-    ~ nick
 "> /etc/motd
 
 # issue file
