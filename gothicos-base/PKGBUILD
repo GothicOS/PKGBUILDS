@@ -7,20 +7,14 @@ depends=('filesystem' 'lsb-release')
 license=("GPL")
 source=("GothicOS-logo.png"
 	"GothicOS-logo.svg"
+	"robo.gif"
 	"GothicOS-logo-dark.svg"
-	"gothicos-menu-icon.svg" 
-	"gothicos-menu-icon.png" 
-	"GothicOS-Skull.png" 
-	"GothicOS-Witch-Book.png"
 	"33-filesystem-setup.hook"
 	"filesystem-setup")
 sha512sums=("92786d6855e91a1a1b21f7d46f8eae0f40c2613a7ea2f142717ac0002a03b35651ad7fb9de2eab026b59c2125f812e00a7f93a9800b0a8b99ecbad70e988dd1a"
 	"b204ab085ff1eea38650a303508a0344126f87e09093e6c2e6cb02db71681541eab9b0293d773bc6f9818e6e0c27a6e794fb89e10a045741dc1eba6ef4866dea"
-	"dedae01f1d8bdf2ed9d52cbb72ddee086811bf9fd9b5ae9953c818034c495955b259fb716cff51e2915db58424d9c0c0623bcd461b97ef21160d990cc5d7a737"
-	"220daf42680ffe295471b86d41c7265287d1a6eee65417604823aa549f04cc834a186dbd5e4294527c737ed2d890077c3fc5c25670b8cb30f3ca5b6de5ca50e2" 
-	"a6ec8ff9b0afc7da23d6ea3a2496982b7db2dd56a45b619030e279ed7bbbc00b01ea80c450123e410a20801af34cb3312724b1d2cda100fbbe92f04b2e5bb8de" 
-	"2b782a39b3682883ae8e2a2dca8a80c95d1d1a467abd93fed24f6937d674981432c9452beffb47bfe414d60b8fc4310c91eb13a85a4ec3454c77e29f201dfae4" 
-	"9b5b044688861a086152e1ce25764f2c3c3c1979ba5453836560f3e3382b942b0d142a5084189c5671b36420a7dc5a9bd1161744d74a8678cd5aea6d6d0874bf"
+	"ee5c0263ff9899123d9ad5352673c52c9b017778f4e7042f1d2f9be17609c9916b2b8396ec0c979b448125da897047f701cb3a891f2f5e5bdcf1135780a3c190"
+	"dedae01f1d8bdf2ed9d52cbb72ddee086811bf9fd9b5ae9953c818034c495955b259fb716cff51e2915db58424d9c0c0623bcd461b97ef21160d990cc5d7a737"	
 	"02b9fe3765bde6b5b673da531991c2f6f571bc639625d1779c675c1433df368c1dcc9fd9239f1ec286711be0bb8ecf1053be9038dd5d62483791bb86d46c4031"
 	"172b31042b6fe993846fe65efc6c39e7670f391dc3b12153fe57b233e432248d80cd5eccb2d927540036bf1caae79877336a22b32e29aae6e531bd7f43c11daf")
 
@@ -29,13 +23,10 @@ package() {
 	install -m 500 -D "./33-filesystem-setup.hook" "${pkgdir}/etc/pacman.d/hooks/33-filesystem-setup.hook"
 
 	## Source script setup
+	install -m 0644 -D "./robo.gif" "${pkgdir}/usr/share/backgrounds/gothicos/Robo.gif"
 	install -m 0755 -D "./filesystem-setup" "${pkgdir}/usr/share/scripts/gothicos/filesystem-setup"
-	
-	## Artwork and other related files 
-	install -m 0644 -D "./gothicos-menu-icon.svg" "${pkgdir}/usr/share/icons/gothicos/symbolic/gothicos-start-icon.svg"
-	install -m 0644 -D "./gothicos-menu-icon.png" "${pkgdir}/usr/share/icons/gothicos/symbolic/gothicos-start-icon.png"
-	install -m 0644 -D "./GothicOS-Skull.png" "${pkgdir}/usr/share/backgrounds/gothicos/Gothic OS Skull.png"
-	install -m 0644 -D "./GothicOS-Witch-Book.png" "${pkgdir}/usr/share/backgrounds/gothicos/Gothic OS Witch Book.png"
+
+	## Artwork and other related files
 	install -m 0644 -D "./GothicOS-logo.png" "${pkgdir}/usr/share/pixmaps/Gothic OS.png"
 	install -m 0644 -D "./GothicOS-logo.svg" "${pkgdir}/usr/share/pixmaps/Gothic OS.svg"
 	install -m 0644 -D "./GothicOS-logo-dark.svg" "${pkgdir}/usr/share/pixmaps/Gothic OS logo - dark.svg"
