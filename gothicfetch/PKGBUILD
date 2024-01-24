@@ -2,7 +2,7 @@
 pkgname="gothicfetch"
 pkgver="1"
 pkgrel="1.0"
-pkgdesc="Gothic OS base files required for the initial setup"
+pkgdesc="A simple fetch script written in order to view information about the system"
 arch=('x86_64')
 depends=('fish')
 license=("GPL")
