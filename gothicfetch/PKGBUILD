@@ -7,7 +7,7 @@ arch=('x86_64')
 depends=('fish')
 license=("GPL")
 source=('gf.fish')
-sha512sums=('177d5527b69c3ba9659673f97f9b434e7f37cea920ca03e74f61e2c3be148fca89f96ddbb4764a5ffb695b8c5bb647883f878b70d1ab4af1820cc9bdb2c46ba0')
+sha512sums=('31af7643c6405fb968199fb9684018e94e69435b91fc21e9e04d7b18c088dad6159441e742c88cdd632f9a6d1b2fb3f7d980a16566348f3f6828c55e1400ad18')
 package() {
 	install -m 0755 -D "gf.fish" "${pkgdir}/usr/bin/gf.fish"
 }
