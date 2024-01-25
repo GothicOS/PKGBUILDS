@@ -1,13 +1,13 @@
 #!/usr/bin/fish
 
 # hostname
-if test -n $hostname
-	set g_hostname $hostname
-else if test -f /etc/hostname
-	set g_hostname (cat /etc/hostname)
-else
-	set g_hostname '?'
-end
+#if test -n $hostname
+#	set g_hostname $hostname
+#else if test -f /etc/hostname
+#	set g_hostname (cat /etc/hostname)
+#else
+#	set g_hostname '?'
+#end
 
 # username
 if test -n $USER
@@ -21,9 +21,16 @@ end
 # os
 if type -q lsb_release
 	set g_os (lsb_release -sd | tr -d '"')
-else if test -f /etc/os-release
-	if grep -Eq '^NAME|PRETTY_NAME' /etc/os-release
-		set g_os (grep -E '^NAME=|PRETTY_NAME=' /etc/os-release | awk -F= '{print $2}' | tr -d '"')
+else if test -f /usr/lib/os-release 
+	or test -f /etc/os-release
+	if grep -Eq '^NAME' /usr/lib/os-release
+		set g_os (grep -E '^NAME=' /usr/lib/os-release | awk -F= '{print $2}' | tr -d '"')
+	else if grep -Eq '^PRETTY_NAME' /usr/lib/os-release
+		set g_os (grep -E '^PRETTY_NAME=' /usr/lib/os-release | awk -F= '{print $2}' | tr -d '"')
+	else if grep -Eq '^NAME' /etc/os-release
+		set g_os (grep -E '^NAME=' /usr/lib/os-release | awk -F= '{print $2}' | tr -d '"')
+	else if grep -Eq '^PRETTY_NAME' /etc/os-release
+		set g_os (grep -E '^PRETTY_NAME=' /usr/lib/os-release | awk -F= '{print $2}' | tr -d '"')
 	end
 else
 	set g_os '?'
